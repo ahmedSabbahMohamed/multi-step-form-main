@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+}
+
+input {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-size: 16px;
+  background-color: hsl(206, 94%, 87%);
+}
+
+.root {
+  background-color: hsl(231, 100%, 99%);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px 0;
+}
+.root .steps {
+  position: relative;
+}
+.root .steps img {
+  width: 100%;
+  height: auto;
+}
+.root .steps ul {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.root .steps ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.root .steps ul li .num {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+  color: hsl(229, 24%, 87%);
+}
+.root .steps ul li .active {
+  background-color: hsl(228, 100%, 84%);
+  color: initial;
+}
+.root .steps ul li .step p {
+  color: hsl(231, 11%, 63%);
+  padding-bottom: 5px;
+}
+.root .steps ul li .step h1 {
+  color: hsl(229, 24%, 87%);
+  font-weight: 400;
+}
+.root .container {
+  position: relative;
+  width: 650px;
+}
+.root .container .get-data {
+  width: 500px;
+  height: 435px;
+  margin: 20px auto;
+}
+.root .container .get-data h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+.root .container .get-data p {
+  margin-bottom: 20px;
+}
+.root .container .get-data:not(:first-child) {
+  display: none;
+}
+.root .container .buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+}
+.root .container .buttons button:nth-child(1) {
+  color: hsl(231, 11%, 63%);
+  display: none;
+  left: 60px;
+}
+.root .container .buttons button:nth-child(2) {
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 10px;
+  color: hsl(231, 100%, 99%);
+  right: 60px;
+}
+.root .container .buttons button:nth-child(2):hover {
+  background-color: hsl(243, 100%, 62%);
+}
+.root .container form .input {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(213, 96%, 18%);
+  padding: 10px;
+  margin: 15px 0 0 0;
+}
+.root .container form .input .error {
+  color: hsl(354, 84%, 57%);
+  display: none;
+}
+.root .three-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.root .three-cards .card {
+  width: 33.3333333333%;
+  height: 200px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.root .three-cards .card:not(:last-child) {
+  margin-right: 15px;
+}
+.root .three-cards .card h1 {
+  font-size: larger;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.root .three-cards .card p {
+  padding: 10px 0;
+  margin: 0;
+}
+.root .three-cards .card h4 {
+  font-weight: 500;
+  color: hsl(213, 96%, 18%);
+}
+.root .three-cards .card .month {
+  display: none;
+}
+.root .three-cards .card .year-toggle {
+  display: none;
+}
+.root .three-cards .active-card {
+  background-color: hsl(217, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+.root .howlong {
+  height: 50px;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .howlong span {
+  display: inline-block;
+  padding: 10px;
+  color: hsl(231, 11%, 63%);
+}
+.root .howlong span:nth-child(2) {
+  font-size: x-large;
+  cursor: pointer;
+  color: hsl(213, 96%, 18%);
+}
+.root .howlong span .rotate {
+  rotate: 180deg;
+}
+.root .howlong .time {
+  color: hsl(213, 96%, 18%);
+}
+.root .card2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+.root .card2 .check {
+  display: flex;
+  align-items: center;
+}
+.root .card2 .check .checkbox {
+  width: auto;
+  margin-right: 10px;
+}
+.root .card2 .check label {
+  margin: 0;
+}
+.root .card2 .check label h1 {
+  font-size: large;
+  margin-bottom: 5px;
+}
+.root .card2 .check label p {
+  margin: 0;
+}
+.root .active-card {
+  background-color: hsl(217, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+.root .card3 {
+  padding: 15px;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 5px;
+}
+.root .card3 .one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.root .card3 .one p {
+  padding: 15px 0;
+  margin-bottom: 0;
+}
+.root .card3 h3, .root .card3 h4 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 400;
+}
+.root .card3 .line {
+  width: 100%;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+  margin-bottom: 10px;
+}
+.root .card3 .first, .root .card3 .second, .root .card3 .thired {
+  display: none;
+}
+.root .card3 .first .right h4, .root .card3 .second .right h4, .root .card3 .thired .right h4 {
+  text-align: right;
+  margin-top: -35px;
+}
+.root .total {
+  padding: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.root .total p {
+  padding: 20px 0;
+}
+.root .total h2 {
+  color: hsl(243, 100%, 62%);
+}
+.root .thank .content {
+  margin-top: 100px;
+  text-align: center;
+}
+.root .thank .content h1 {
+  color: hsl(213, 96%, 18%);
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+.root .thank .content p {
+  line-height: 1.5;
+}/*# sourceMappingURL=style.css.map */

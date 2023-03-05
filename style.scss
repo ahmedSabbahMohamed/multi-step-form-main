@@ -1,0 +1,296 @@
+//import colors
+@use "./SASS/helpers/colors" as *;
+//import fonts
+@use "./SASS/helpers/fonts" as *;
+//import globalRules
+@use "./SASS/layouts/globalRules" as *;
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 16px;
+    background-color: $bg-body;
+}
+
+//START MAIN
+.root {
+    background-color: $light;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px 0;
+    .steps {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        ul {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                .num {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $lightgray;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    margin-right: 20px;
+                    color: $lightgray;
+                }
+                .active {
+                    background-color: $bg-number;
+                    color: initial;
+                }
+                .step {
+                    p {
+                        color: $para;
+                        padding-bottom: 5px;
+                    }
+                    h1 {
+                        color: $lightgray;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    //START STEP 1
+    .container {
+        position: relative;
+        width: 650px;
+        .get-data {
+            width: 500px;
+            height: 435px;
+            margin: 20px auto;
+            h1 {
+                color: $heading;
+                margin-bottom: 20px;
+                font-size: xx-large;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+        .buttons {
+            button {
+                border: none;
+                background-color: transparent;
+                font-size: $paragSize;
+                padding: 10px 15px;
+                cursor: pointer;
+                position: absolute;
+                bottom: 20px;
+                &:nth-child(1) {
+                    color: $para;
+                    display: none;
+                    left: 60px;
+                }
+                &:nth-child(2) {
+                    background-color: $heading;
+                    border-radius: 10px;
+                    color: $light;
+                    right: 60px;
+                    &:hover {
+                        background-color: $bg-btn;
+                    }
+                }
+            }
+        }
+        form {
+            .input {
+                display: flex;
+                justify-content: space-between;
+                color: $heading;
+                padding: 10px;
+                margin: 15px 0 0 0;
+                .error {
+                    color: $warning;
+                    display: none;
+                }
+            }
+        }
+    }
+    //END STEP1
+
+
+    // START STEP2
+    .three-cards {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        .card {
+            width: calc((100% / 3));
+            height: 200px;
+            border: 1px solid $lightgray;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+            h1 {
+                font-size: larger;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            p {
+                padding: 10px 0;
+                margin: 0;
+            }
+            h4 {
+                font-weight: 500;
+                color: $heading;
+            }
+            .month {
+                display: none;
+            }
+            .year-toggle {
+                display: none;
+            }
+        }
+        .active-card {
+            background-color: $txt-btn;
+            border: 1px solid $bg-btn;
+        }
+    }
+
+    .howlong {
+        height: 50px;
+        background-color: $txt-btn;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: inline-block;
+            padding: 10px;
+            color: $para;
+            &:nth-child(2) {
+                font-size: x-large;
+                cursor: pointer;
+                color: $heading;
+            }
+            .rotate {
+                rotate: 180deg;
+            }
+        }
+        .time {
+            color: $heading;
+        }
+    }
+    //END STEP 2
+
+    //START STEP 3
+    .card2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $lightgray;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px 0;
+        .check {
+            display: flex;
+            align-items: center;
+            .checkbox {
+                width: auto;
+                margin-right: 10px;
+            }
+            label {
+                margin: 0;
+                h1 {
+                    font-size: large;
+                    margin-bottom: 5px;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .active-card {
+        background-color: $txt-btn;
+        border: 1px solid $bg-btn;
+    }
+    //END STEP 3
+
+    // START STEP 4
+    .card3 {
+        padding: 15px;
+        background-color: $txt-btn;
+        border-radius: 5px;
+        .one {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                padding: 15px 0;
+                margin-bottom: 0;
+            }
+        }
+        h3, h4 {
+            color: $heading;
+            font-weight: 400;
+        }
+        .line {
+            width: 100%;
+            border-bottom: 1px solid $lightgray;
+            margin-bottom: 10px;
+        }
+        .first,.second,.thired {
+            display: none;
+            .right {
+                h4 {
+                    text-align: right;
+                    margin-top: -35px;
+                }
+            }
+        }
+    }
+
+    .total {
+        padding: 15px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            padding: 20px 0;
+        }
+        h2 {
+            color: $bg-btn;
+        }
+    }
+    //END STEP 4
+
+    // START STEP 5
+    .thank {
+        .content {
+            margin-top: 100px;
+            text-align: center;
+            h1 {
+                color: $heading;
+                padding: 10px 0;
+                margin-bottom: 0;
+            }
+            p {
+                line-height: 1.5;
+            }
+        }
+    }
+    //END STEP 5
+}
+//END MAIN

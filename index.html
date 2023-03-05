@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-thank-you.svg">
+  <title>Ahmed Sabbah | Frontend Mentor | Multi-step form</title>
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <!-- START MAIN -->
+  <main class="root">
+    <!-- START ASIDE -->
+    <aside class="steps">
+        <img src="./assets/images/bg-sidebar-desktop.svg" alt="sidebar">
+        <ul>
+          <li>
+            <div class="num active">1</div>
+            <div class="step">
+              <p>STEP 1</p>
+              <h1>YOUR INFO</h1>
+            </div>
+          </li>
+          <li>
+            <div class="num">2</div>
+            <div class="step">
+              <p>STEP 2</p>
+              <h1>SELECT PLAN</h1>
+            </div>
+          </li>
+          <li>
+            <div class="num">3</div>
+            <div class="step">
+              <p>STEP 3</p>
+              <h1>ADD-ONS</h1>
+            </div>
+          </li>
+          <li>
+            <div class="num">4</div>
+            <div class="step">
+              <p>STEP 4</p>
+              <h1>SUMMARY</h1>
+            </div>
+          </li>
+        </ul>
+    </aside>
+    <!-- END ASIDE -->
+
+    <!-- START STEPS SECTION -->
+    <section class="container">
+
+      <!-- STEP 1 START -->
+      <section class="persnal-info get-data">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <form action="#">
+          <div class="input">
+            <span>Name</span>
+            <span class="error">Name required</span>
+          </div>
+          <input type="text" name="name" id="name" required placeholder="e.g.   Stephen King">
+          <div class="input">
+            <span>Email</span>
+            <span class="error">Your email not valid</span>
+          </div>
+          <input type="email" name="email" id="email" required placeholder="e.g.   stephenking@lorem.com">
+          <div class="input">
+            <span>Phone</span>
+            <span class="error">Your phone number not valid</span>
+          </div>
+          <input type="text" name="phone" id="phone" required placeholder="e.g.   +1 234 567 890">
+        </form>
+      </section>
+      <!-- STEP 1 END -->
+<!-- ======================================================================================================= -->
+      <!-- STEP 2 START -->
+      <section class="select-plan get-data">
+        <h1>Select your plan</h1>
+        <p>You have the otion of monthly or yearly billing.</p>
+        <div class="three-cards">
+          <div class="card">
+            <div class="image">
+              <img src="./assets/images/icon-arcade.svg" alt="acard">
+            </div>
+            <h1>Acrade</h1>
+            <div class="month hill">
+              <p>$9/mo</p>
+            </div>
+            <div class="year">
+              <p>$90/yr</p>
+              <h4>2 months free</h4>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="./assets/images/icon-advanced.svg" alt="acard">
+            </div>
+            <h1>Advanced</h1>
+            <div class="month hill">
+              <p>$12/mo</p>
+            </div>
+            <div class="year">
+              <p>$120/yr</p>
+              <h4>2 months free</h4>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="./assets/images/icon-pro.svg" alt="acard">
+            </div>
+            <h1>Pro</h1>
+            <div class="month hill">
+              <p>$15/mo</p>
+            </div>
+            <div class="year">
+              <p>$150/yr</p>
+              <h4>2 months free</h4>
+            </div>
+          </div>
+        </div>
+        <div class="howlong">
+          <span>Monthly</span>
+          <span><i class="fa-solid fa-toggle-on"></i></span>
+          <span class="time">Yearly</span>
+        </div>
+      </section>
+      <!-- STEP 2 END -->
+<!-- ======================================================================================================= -->
+      <!-- STEP 3 START -->
+      <section class="add-ons get-data">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div class="card2" data-num=".first">
+          <div class="check">
+            <input type="checkbox" name="checkbox" class="checkbox">
+            <label for="checkbox">
+              <h1>Online service</h1>
+              <p>Access to multiplayer games</p>
+            </label>
+          </div>
+          <p class="price">+$1/mo</p>
+        </div>
+        <div class="card2" data-num=".second">
+          <div class="check">
+            <input type="checkbox" name="checkbox2" class="checkbox">
+            <label for="checkbox2">
+              <h1>Larger storage</h1>
+              <p>Extra 1TB of cloud save</p>
+            </label>
+          </div>
+          <p class="price">+$2/mo</p>
+        </div>
+        <div class="card2" data-num=".thired">
+          <div class="check">
+            <input type="checkbox" name="checkbox3" class="checkbox">
+            <label for="checkbox3">
+              <h1>Customizable profile</h1>
+              <p>Custom theme on your profile</p>
+            </label>
+          </div>
+          <p class="price">+$2/mo</p>
+        </div>
+      </section>
+      <!-- STEP 3 END -->
+<!-- ======================================================================================================= -->
+      <!-- STEP 4 START -->
+      <section class="finishing get-data">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+        <div class="card3">
+          <div class="one">
+            <div class="left">
+              <h3></h3>
+              <p style="text-decoration: underline; cursor: pointer;">Change</p>
+            </div>
+            <div class="right">
+              <h3></h3>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="one first">
+            <div class="left">
+              <p>Online service</p>
+            </div>
+            <div class="right">
+              <h4>+$1/mo</h4>
+            </div>
+          </div>
+          <div class="one second">
+            <div class="left">
+              <p>Larger storage</p>
+            </div>
+            <div class="right">
+              <h4>+$2/mo</h4>
+            </div>
+          </div>
+          <div class="one thired">
+            <div class="left">
+              <p>Customizable Profile</p>
+            </div>
+            <div class="right">
+              <h4>+$2/mo</h4>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="total">
+          <p style="margin-bottom: 0;"></p>
+          <h2>+$12/mo</h2>
+        </div> -->
+      </section>
+      <!-- STEP 4 END -->
+<!-- ======================================================================================================= -->
+      <!-- STEP 5 START -->
+      <section class="thank get-data">
+          <div class="content">
+            <div class="image">
+              <img src="./assets/images/icon-thank-you.svg" alt="">
+            </div>
+            <h1>Thank you!</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun using our platform. if you ever need support, please feel free to email us at suppot@loremgaming.com.</p>
+          </div>
+      </section>
+      <!-- STEP 5 END -->
+<!-- ======================================================================================================= -->
+      <!-- START BUTTONS -->
+      <div class="buttons">
+        <button class="go-back">Go Back</button>
+        <button class="go-next">Next Step</button>
+      </div>
+      <!-- END BUTTONS -->
+    </section>
+    <!-- END STEPS SECTION -->
+  </main>
+  <!-- END MAIN -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ahmed Sabbah Mohamed</a>.
+  </div> -->
+  <script src="./script.js"></script>
+</body>
+</html>
